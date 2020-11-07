@@ -23,7 +23,7 @@ RUN wget -q -O knox.zip http://ftp-stud.hs-esslingen.de/pub/Mirrors/ftp.apache.o
 # TODO Verify download (cf. https://knox.apache.org/books/knox-1-1-0/user-guide.html#Quick+Start)
 
 RUN ln -s /opt/knox-${KNOX_VERSION} /opt/knox
-RUN sed -i 's/localhost:50070/hadoop-standalone.zdmp:50070/g' /opt/knox/conf/topologies/sandbox.xml
+RUN sed -i 's/localhost:50070/hadoop-standalone:50070/g' /opt/knox/conf/topologies/sandbox.xml
 
 ENV GATEWAY_HOME /opt/knox/
 
